@@ -1,0 +1,17 @@
+<%= form_with model: produto do |form| %>
+    <div>
+        <%= form.label :nome %>
+        <%= form.text_field :nome %>
+    </div>
+    <div>
+        <%= form.label :corredor %>
+        <%= form.text_field :corredor %>
+    </div>
+    <div class="form-check">
+        <%= form.check_box :em_estoque, class:"check-box" %>
+        <%= form.label :em_estoque %>
+    </div>
+    <div class="container-btn-submit">
+        <%= form.submit "Enviar", class:"btn-submit-form" %>
+    </div>
+<%end%>

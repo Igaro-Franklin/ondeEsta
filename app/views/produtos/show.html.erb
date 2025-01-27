@@ -1,0 +1,10 @@
+<h1 class="titulo"> <%= @produto.nome %></h1>
+
+<p><span>Corredor:</span> <%= @produto.corredor %></p>
+<p><span>Em estoque:</span> <%= @produto.em_estoque ? 'Sim' : 'Não' %></p>
+
+<div class="container-btn">
+    <%= link_to "Editar", edit_produto_path(@produto), class:"btn-edita" %>
+    <%= button_to "Excluir", produto_path(@produto), class:"btn-excluir", method: :delete, data: {turbo_confirm: "Você tem certeza?"} %>
+    <%= link_to "Voltar", produtos_path, class:"btn-voltar" %>
+</div>

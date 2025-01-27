@@ -1,0 +1,26 @@
+.form-check{
+    display: flex;
+    align-items: center;
+}
+
+.check-box{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.container-btn-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-submit-form{
+    width: 150px;
+    background-color: #2c2966;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+}

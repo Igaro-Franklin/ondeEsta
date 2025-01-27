@@ -1,0 +1,26 @@
+ <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Corredor</th>
+        <th>Em Estoque</th>
+        <% if authenticated? %> <th>Ações</th> <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @produtos.each do |produto| %>
+        <tr>
+          <td><%= produto.nome %></td>
+          <td><%= produto.corredor %></td>
+          <td><%= produto.em_estoque ? 'Sim' : 'Não' %></td>
+          <% if authenticated? %>
+          <td>
+            <%= link_to produto, class: "btn-show-produto" do %>
+              <i class="bi bi-eye"></i>
+            <% end %>
+          </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

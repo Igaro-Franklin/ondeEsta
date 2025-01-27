@@ -1,0 +1,40 @@
+.flash-alert {
+    color: red;
+}
+
+.flash-notice {
+    color: green;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+}

@@ -1,0 +1,5 @@
+<% if @produtos.any? %>
+  document.getElementById("produtos-list").innerHTML = `<%= raw render("produtos_lista", produtos: @produtos) %>`;
+<% else %>
+  document.getElementById("produtos-list").innerHTML = "<p>Nenhum produto encontrado.</p>";
+<% end %>

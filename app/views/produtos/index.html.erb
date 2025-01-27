@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="header-index">
+    <h1 class="titulo">Produtos</h1>
+
+    <%= link_to "Novo Produto", new_produto_path, class:"btn-novo-produto" if authenticated? %>
+  </div>
+
+  <div class="container-pesquisa">
+    <%= form_with url: produtos_path, method: :get, local: true, id: "search-form" do |form| %>
+      <%= form.label :pesquisar, "Pesquisar:" , class:"titulo"%>
+      <%= form.text_field :pesquisar, placeholder: "Digite o nome do produto", id: "search-input" %>
+    <% end %>
+  </div>
+
+  <!-- Onde os resultados filtrados serão exibidos -->
+  <div id="produtos-list">
+    <%= render "produtos_lista", produtos: @produtos %>
+  </div>
+
+</div>
+
+<!-- JavaScript para filtrar em tempo real -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById("search-input");
+
+    searchInput.addEventListener("input", function() {
+      const query = searchInput.value;
+      
+      fetch(`/produtos?pesquisar=${query}`, { headers: { "Accept": "text/javascript" } })
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById("produtos-list").innerHTML = html;
+        });
+    });
+  });
+</script>
+
