@@ -1,5 +1,7 @@
 # Onde Está
 
+![Tela da Aplicação](app/assets/images/telaAplicacao.png)
+
 Este é um projeto Ruby on Rails para gerenciar produtos em estoque. Ele permite criar, editar, excluir e pesquisar produtos.
 
 ## Configuração
